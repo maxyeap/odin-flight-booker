@@ -1,0 +1,4 @@
+<h1>Confirm Your Booking</h1>
+<%= render "flight_details", flight: Flight.find(@booking.flight_id) %>
+<%= render "error_explanation", booking: @booking %>
+<%= render "booking_form", booking: @booking %>

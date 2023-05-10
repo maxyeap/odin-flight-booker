@@ -1,0 +1,11 @@
+<%= form_with url: new_booking_path, method: :get do |form| %>
+  <%= form.collection_radio_buttons :flight_id, @result, :id, :to_str do |b| %>
+    <div>
+      <%= b.radio_button %>
+      <%= b.label %>
+    </div>
+  <% end %>
+  <%= form.hidden_field(:num_tickets, value: params[:num_tickets]) %>
+  <br>
+  <%= form.submit "Next" %>
+<% end %>

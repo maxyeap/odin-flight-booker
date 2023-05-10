@@ -1,0 +1,12 @@
+<%= form_with model: booking do |booking_form| %>
+  <%= booking_form.hidden_field(:flight_id, value: booking.flight_id) %>
+  <%= booking_form.fields_for :passengers do |passengers_form| %>
+    <p><b><%= "Passenger #{passengers_form.index + 1}" %></b></p>
+    <%= passengers_form.label(:name, "Name") %>
+    <%= passengers_form.text_field :name %>
+    <%= passengers_form.label(:email, "Email") %>
+    <%= passengers_form.email_field :email %>
+    <br><br>
+  <% end %>
+  <%= booking_form.submit %>
+<% end %>
