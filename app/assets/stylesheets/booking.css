@@ -45,6 +45,12 @@
   flex: 1;
 }
 
+.passenger-container div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .passenger-container div p {
   font-weight: 600;
 }
