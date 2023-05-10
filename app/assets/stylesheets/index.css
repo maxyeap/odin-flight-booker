@@ -87,13 +87,15 @@
 }
 
 .result-menu form input,
-.button-container input {
+.button-container input,
+.button-container a {
   padding: 12px 50px;
   border: 0;
   font-size: 1rem;
   color: #ffffff;
   background-color: red;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .result-menu form div {
