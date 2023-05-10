@@ -77,4 +77,8 @@
   .passenger-container div {
     justify-content: left;
   }
+
+  .passenger-container {
+    flex: 1;
+  }
 }
