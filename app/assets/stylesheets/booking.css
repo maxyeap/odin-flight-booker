@@ -28,9 +28,14 @@
 
 .booking-form form {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: center;
+}
+
+.passenger-container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .passenger-container {
@@ -43,11 +48,12 @@
   border-width: 1px;
   border-radius: 4px;
   flex: 1;
+  align-items: center;
 }
 
 .passenger-container div {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
 }
 
@@ -60,4 +66,16 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .flight-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .passenger-container div {
+    justify-content: left;
+  }
 }

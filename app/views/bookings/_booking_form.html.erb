@@ -1,6 +1,7 @@
 <div class="booking-form">
   <%= form_with model: booking do |booking_form| %>
     <%= booking_form.hidden_field(:flight_id, value: booking.flight_id) %>
+    <div class="passenger-container-wrapper">
     <%= booking_form.fields_for :passengers do |passengers_form| %>
       <div class="passenger-container">
         <div>
@@ -16,6 +17,7 @@
         </div>
       </div>
     <% end %>
+    </div>
     <div class="button-container"><%= booking_form.submit %></div>
   <% end %>
 </div>

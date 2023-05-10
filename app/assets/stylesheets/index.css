@@ -30,6 +30,7 @@
   flex: 0 0 100%;
   align-items: end;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .container.flight-menu form div {
@@ -45,6 +46,9 @@
   color: #ffffff;
   background-color: red;
   cursor: pointer;
+}
+.submit-button-container {
+  flex-basis: 100%;
 }
 
 .label {
@@ -104,4 +108,18 @@
 
 .result-menu form div input {
   width: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container.flight-menu form {
+    justify-content: center;
+  }
+
+  .container.flight-menu {
+    justify-content: center;
+  }
+
+  .container.result-menu {
+    text-align: center;
+  }
 }
