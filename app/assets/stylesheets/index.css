@@ -75,6 +75,11 @@
   display: none;
 }
 
+.result-menu {
+  justify-content: center;
+  align-items: center;
+}
+
 .result-menu form {
   display: flex;
   flex-direction: column;
