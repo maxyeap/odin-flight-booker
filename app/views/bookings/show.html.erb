@@ -1,9 +1,17 @@
-<h1>Your Booking is Successful</h1>
-<%= render "flight_details", flight: Flight.find(@booking.flight_id) %>
-<dl>
-  <% @booking.passengers.each_with_index do |passenger, index| %>
-    <dt><b><%= "Passenger #{index + 1}" %></b></dt>
-    <dd><%= "Name: #{passenger.name}" %></dd>
-    <dd><%= "Email: #{passenger.email}" %></dd>
-  <% end %>
-</dl>
+<section class="booking-section confirmed">
+  <div class="container">
+    <div class="booking-details-wrapper hero">
+      <h1>Your booking is confirmed</h1>
+      <%= render "flight_details", flight: Flight.find(@booking.flight_id) %>
+    </div>
+    <dl>
+    <% @booking.passengers.each_with_index do |passenger, index| %>
+      <div class="passenger-container">
+        <dt><b><%= "Passenger #{index + 1} Details" %></b></dt>
+        <dd><%= "Name: #{passenger.name}" %></dd>
+        <dd><%= "Email: #{passenger.email}" %></dd>
+      </div>
+    <% end %>
+  </dl>
+  </div>
+</section>

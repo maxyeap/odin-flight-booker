@@ -11,6 +11,13 @@
   </head>
 
   <body>
+  <header>
+  <div><%= link_to root_path do %>
+      Africa<span>_</span>Airline
+      <% end %>
+  </div>
+
+  </header>
     <% flash.each do |type, msg| %>
       <div>
         <%= msg %>

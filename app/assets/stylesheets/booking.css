@@ -1,0 +1,57 @@
+.booking-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+
+.flight-details {
+  display: grid;
+  width: 80%;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+}
+
+.flight-details div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  grid-row: 1;
+}
+
+.booking-form {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.passenger-container {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 50px;
+  border-color: rgb(217, 219, 224);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.passenger-container div p {
+  font-weight: 600;
+}
+
+.button-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}

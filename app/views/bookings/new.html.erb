@@ -1,4 +1,10 @@
-<h1>Confirm Your Booking</h1>
-<%= render "flight_details", flight: Flight.find(@booking.flight_id) %>
-<%= render "error_explanation", booking: @booking %>
-<%= render "booking_form", booking: @booking %>
+<section class="booking-section">
+  <%= render "error_explanation", booking: @booking %>
+  <div class="container">
+    <div class="booking-details-wrapper hero">
+    <h1>Confirm Your Booking</h1>
+    <%= render "flight_details", flight: Flight.find(@booking.flight_id) %>
+    </div>
+    <%= render "booking_form", booking: @booking %>
+  </div>
+</section>

@@ -1,3 +1,14 @@
-<p>Date: <%= flight.start.to_date %></p>
-<p>Departure Airport: <%= "#{flight.departure_airport.code} - #{flight.departure_airport.city}" %></p>
-<p>Arrival Airport: <%= "#{flight.arrival_airport.code} - #{flight.arrival_airport.city}" %></p>
+<div class="flight-details">
+  <div>
+    <p class="label" >Date Time</p>
+    <p><%= flight.start %></p>
+  </div>
+  <div>
+    <p class="label">Departure Airport</p>
+    <p><%= "#{flight.departure_airport.code} - #{flight.departure_airport.city}" %></p>
+  </div>
+  <div>
+    <p class="label">Arrival Airport</p>
+    <p><%= "#{flight.arrival_airport.code} - #{flight.arrival_airport.city}" %></p>
+  </div>
+</div>

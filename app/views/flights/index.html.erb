@@ -1,20 +1,40 @@
-<h1>Africa Airlines</h1>
-<%= form_with url: flights_path, method: :get, remote: true do |form| %>
-  <span>From</span>
-  <%= form.collection_select :departure_code, Airport.order(:city), :code, :city_with_code, {:selected => params[:departure_code]} %>
-  <span>To</span>
-  <%= form.collection_select :arrival_code, Airport.order(:city), :code, :city_with_code, {:selected => params[:arrival_code]}%>
-  <span>Depart</span>
-  <%= select_tag(:date, options_for_select(@unique_flight_dates, params[:date])) %>
-  <span>Number of tickets</span>
-  <%= form.select :num_tickets, [[1, 1], [2, 2], [3, 3], [4, 4]], {:selected => params[:num_tickets]} %>
-  <%= form.submit "Search" %>
-<% end %>
-<% if params[:num_tickets].nil? %>
-  <p>Select your desired flight crtieria & press the search button to get started</p>
-<% elsif @result == [] %>
-  <p>No flights available with the selected criteria. Please try again.</p>
-<% else %>
-  <br>
-  <%= render "result" %>
-<% end %>
+<section class="flight-menu-wrapper">
+  <div>
+    <div class="container flight-menu hero">
+      <p>One-Way</p>
+      <%= form_with url: flights_path, method: :get, remote: true do |form| %>
+      <div>
+        <span class="label">From</span>
+        <div class="custom-select">
+          <%= form.collection_select :departure_code, Airport.order(:city), :code, :city_with_code, {:selected => params[:departure_code]} %>
+        </div>
+      </div>
+      <div>
+        <span class="label">To</span>
+        <%= form.collection_select :arrival_code, Airport.order(:city), :code, :city_with_code, {:selected => params[:arrival_code]}%>
+      </div>
+      <div>
+        <span class="label">Depart</span>
+        <%= select_tag(:date, options_for_select(@unique_flight_dates, params[:date])) %>
+      </div>
+      <div>
+        <span class="label">Number of guests</span>
+        <%= form.select :num_tickets, [[1, 1], [2, 2], [3, 3], [4, 4]], {:selected => params[:num_tickets]} %>
+      </div>
+      <div class="submit-button-container">
+        <%= form.submit "Search" %>
+      </div>
+      <% end %>
+    </div>
+    <div class="container result-menu">
+      <% if params[:num_tickets].nil? %>
+        <p>Select your desired flight criteria & press the search button to get started</p>
+      <% elsif @result == [] %>
+        <p>No flights available with the selected criteria. Please try again.</p>
+      <% else %>
+        <br>
+        <%= render "result" %>
+      <% end %>
+    </div>
+  </div>
+</section>

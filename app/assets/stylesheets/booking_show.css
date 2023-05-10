@@ -1,0 +1,9 @@
+.booking-section.confirmed {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-section.confirmed dl {
+  display: flex;
+}
